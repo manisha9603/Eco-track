@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = '/api';
+const API_BASE = 'https://ecotrack-backend-0dnw.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE,
