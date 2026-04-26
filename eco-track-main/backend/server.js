@@ -8,7 +8,18 @@ const bcrypt = require('bcryptjs');
 const app = express();
 
 // Middleware
-app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175'], credentials: true }));
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5174', 
+    'http://localhost:5175',
+    'https://eco-track-lemon-nu.vercel.app',
+    'https://eco-track-95xokeery-manishas-projects-52d66dad.vercel.app',
+    /\.vercel\.app$/  // allows all vercel preview URLs
+  ],
+  credentials: true
+}));
+
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
